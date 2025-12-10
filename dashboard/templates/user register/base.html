@@ -1,11 +1,48 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% 'static login_style.css' %}">
 </head>
 <body>
-    
+    <!-- login base -->
+
+    <header>
+        <div class="nav-header">
+            <ul>
+                <li><h1>Login</h1></li>
+                <li>
+                    <a href="{% url 'index' %}">Início</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'eventos' %}">Eventos</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'grupos' %}">Grupos</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'historia' %}">História</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="dashboard-user-forms">
+        <form method="POST">
+            <label for="user-username">Nome de usuário:</label><br>
+            <input type="text" id="username" name="username"><br>
+
+            <label for="user-password">Senha:</label><br>
+            <input type="password" id="user-password" name="user-password"><br>
+
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
 </body>
 </html>

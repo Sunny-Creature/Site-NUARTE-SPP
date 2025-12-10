@@ -17,7 +17,7 @@ def index(request):
 
         if form.is_valid():
             form.save()
-            print("Salvo com sucesso!")
+            print("A mensagem foi enviada com sucesso!")
 
         context['form_contato'] = form
     return render(request, "nuarte/index.html", context)

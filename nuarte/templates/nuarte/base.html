@@ -12,32 +12,39 @@
 </head>
 
 <body>
-    {% block content %}
-        <div class="global-navbar">
-            <ul class="nav justify-content-end">
-                <li>
-                    <div class="nuarte-icon">
-                        
-                    </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="eventos.html">Eventos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="grupos.html">Grupos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="historia.html">História</a>
-                </li>
-                <li>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Digite aqui" aria-label="Search"/>
-                        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                    </form>
-                </li>
-            </ul>
-        </div>
-    {% endblock %}
+    <div class="global-navbar">
+        <ul class="nav justify-content-end">
+            <li>
+                <div class="nuarte-icon"></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="eventos.html">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="grupos.html">Grupos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="historia.html">História</a>
+            </li>
+            <li>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Digite aqui" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    {% for in %}
+    <div>
+
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Enviar">
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
