@@ -12,14 +12,14 @@ def index(request):
     }
 
     if request.method == 'POST':
-        form = FormContato(request.POST)
+        form_contato = FormContato(request.POST)
         print("É um POST!")
 
-        if form.is_valid():
-            form.save()
-            print("A mensagem foi enviada com sucesso!")
+        if form_contato.is_valid():
+            form_contato.save()
+            print("A mensagem foi enviada e salva com sucesso!")
 
-        context['form_contato'] = form
+        context['form_contato'] = form_contato
     return render(request, "nuarte/index.html", context)
 
 def eventos(request):
