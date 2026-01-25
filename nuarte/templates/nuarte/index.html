@@ -16,14 +16,30 @@
     {% block content %}
         <p>insert text</p>
 
-        <div class="div">
-            <img src="{% static 'static/nuarte/img/imagem de fundo - inicio.png' %}" alt="imagem da pagina principal">
+        <div class="nuarte-groups1">
+            <h2>CONHEÇA NOSSOS GRUPOS</h2>
+
+            {% for grupos in groups %}
+                <p>{{ grupos.icone_grupo }}</p>
+                <p>{{ grupos.nome_grupo }}</p>
+            {% endfor %}
         </div>
 
-        <h1>Quer nos mandar uma mensagem?</h1>
+        <div class="nuarte-coordinators1">
+            <h2>COORDENADORES DO NUARTE</h2>
+
+            {% for coordenadores in coordinators %}
+                <p>{{ coordenadores.icone_coordenadores }}</p>
+                <p>{{ coordenadores.nome_coordenadores }}</p>
+            {% endfor %}
+        </div>
+
+        <!-- forms para contato-->
+
+        <h1>PARA DÚVIDAS, ENTRE EM CONTATO:</h1>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form_contato | crispy }}
+            {{ form | crispy }}
             <input type="submit" value="Enviar">
         </form>
 

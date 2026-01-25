@@ -6,8 +6,8 @@ from nuarte.forms import FormContato
 
 def index(request):
     context = {
-        'grupos': Grupos.objects.all(),
-        'coordenadores': Coordenadores.objects.all(),
+        'groups': Grupos.objects(),
+        'coordinators': Coordenadores.objects(),
         'form_contato': FormContato(),
     }
 
