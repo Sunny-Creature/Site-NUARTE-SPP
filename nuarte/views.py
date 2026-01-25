@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from nuarte.models import Eventos, Grupos, Historia, Orientadores
+from nuarte.models import Eventos, Grupos, Historia, Coordenadores
 from nuarte.forms import FormContato
 
 # Create your views here.
@@ -7,7 +7,7 @@ from nuarte.forms import FormContato
 def index(request):
     context = {
         'grupos': Grupos.objects.all(),
-        'orientadores': Orientadores.objects.all(),
+        'coordenadores': Coordenadores.objects.all(),
         'form_contato': FormContato(),
     }
 
@@ -17,7 +17,7 @@ def index(request):
 
         if form_contato.is_valid():
             form_contato.save()
-            print("A mensagem foi enviada e salva com sucesso!")
+            print("A mensagem foi salva com sucesso!")
 
         context['form_contato'] = form_contato
     return render(request, "nuarte/index.html", context)
@@ -37,5 +37,6 @@ def grupos(request):
 def historia(request):
     context = {
         'historia': Historia.objects.all(),
+        'coordenadores': Coordenadores.objects.all(),
     }
     return render(request, "nuarte/historia.html", context)

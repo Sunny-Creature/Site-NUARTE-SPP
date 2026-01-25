@@ -2,25 +2,34 @@ from django.db import models
 
 # Create your models here.
 
-# - - - página principal - - -
-class PagPrincipal(models.Model):
-    img_principal = models.ImageField(upload_to="pag_principal/")
+class ImgFundo(models.Model):
+    img_nuarte_inicio = models.ImageField(upload_to="img_fundos/")
+    img_campus = models.ImageField(upload_to="img_fundos/")
+    img_historia = models.ImageField(upload_to="img_fundos/")
+
+class Coordenadores(models.Model):
+    nome_coordenador = models.CharField(max_length=100)
+    bio_coordenador = models.CharField(max_length=200)
+    icone_coordenador = models.ImageField(upload_to="icones_coordenadores/")
 
 class Grupos(models.Model):
     nome_grupo = models.CharField(max_length=20)
     icone_grupo = models.ImageField(upload_to="icones_grupos/")
+    nome_bolsista = models.CharField(max_length=100)
+    icone_bolsista = models.ImageField(upload_to="icones_bolsistas/")
 
-class Orientadores(models.Model):
-    nome_orientador = models.CharField(max_length=40)
-    icone_orientador = models.ImageField(upload_to="icones_orientadores/")
-
-# - - - página de eventos - - -
 class Eventos(models.Model):
-    nome_evento = models.CharField(max_length=60)
+    titulo_evento = models.CharField(max_length=60)
     img_evento = models.ImageField(upload_to="img_eventos/")
     desc_evento = models.CharField(max_length=500)
 
-# - - - página de história - - -
 class Historia(models.Model):
     img_historia = models.ImageField(upload_to="img_historia/")
-    descricao = models.CharField(max_length=500)
+    desc_historia = models.CharField(max_length=500)
+
+# -- model para form de contato
+class Contato(models.Model):
+    nome_contato = models.CharField(label="Nome:")
+    mensagem_contato = models.CharField(max_length="500")
+    data_envio_contato = models.DateField(auto_now_add=True)
+    horas_envio_contato = models.TimeField(auto_now_add=True)

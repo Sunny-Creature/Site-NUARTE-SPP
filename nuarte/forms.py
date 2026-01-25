@@ -1,5 +1,6 @@
 from django import forms
+from .models import Contato
 
-class FormContato(forms.Form):
-    nome = forms.CharField(label="Nome:")
-    mensagem = forms.CharField(widget=forms.Textarea, max_length="500", label="Mensagem:")
+class FormContato(forms.ModelForm):
+    class Meta:
+        model = Contato
