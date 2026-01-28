@@ -2,11 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-class ImgFundo(models.Model):
-    img_nuarte_inicio = models.ImageField(upload_to="img_fundos/")
-    img_campus = models.ImageField(upload_to="img_fundos/")
-    img_historia = models.ImageField(upload_to="img_fundos/")
-
 class Coordenadores(models.Model):
     nome_coordenador = models.CharField(max_length=100)
     bio_coordenador = models.CharField(max_length=200)
@@ -29,7 +24,7 @@ class Historia(models.Model):
 
 # -- model para form de contato
 class Contato(models.Model):
-    nome_contato = models.CharField(label="Nome:")
+    nome_contato = models.CharField(max_length="100")
     mensagem_contato = models.CharField(max_length="500")
     data_envio_contato = models.DateField(auto_now_add=True)
     horas_envio_contato = models.TimeField(auto_now_add=True)
