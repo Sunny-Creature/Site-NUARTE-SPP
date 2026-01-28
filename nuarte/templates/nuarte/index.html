@@ -19,7 +19,7 @@
         <div class="nuarte-groups1">
             <h2>CONHEÇA NOSSOS GRUPOS</h2>
 
-            {% for grupos in groups %}
+            {% for groups in grupos %}
                 <p>{{ grupos.icone_grupo }}</p>
                 <p>{{ grupos.nome_grupo }}</p>
             {% endfor %}
@@ -28,7 +28,7 @@
         <div class="nuarte-coordinators1">
             <h2>COORDENADORES DO NUARTE</h2>
 
-            {% for coordenadores in coordinators %}
+            {% for coordinators in coordenadores %}
                 <p>{{ coordenadores.icone_coordenadores }}</p>
                 <p>{{ coordenadores.nome_coordenadores }}</p>
             {% endfor %}
@@ -39,7 +39,7 @@
         <h1>PARA DÚVIDAS, ENTRE EM CONTATO:</h1>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form | crispy }}
+            {{ form_contato | crispy }}
             <input type="submit" value="Enviar">
         </form>
 

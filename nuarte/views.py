@@ -6,14 +6,13 @@ from nuarte.forms import FormContato
 
 def index(request):
     context = {
-        'groups': Grupos.objects(),
-        'coordinators': Coordenadores.objects(),
+        'groups': Grupos.objects.all(),
+        'coordinators': Coordenadores.objects.all(),
         'form_contato': FormContato(),
     }
 
     if request.method == 'POST':
         form_contato = FormContato(request.POST)
-        print("É um POST!")
 
         if form_contato.is_valid():
             form_contato.save()
@@ -24,19 +23,19 @@ def index(request):
 
 def eventos(request):
     context = {
-        'eventos': Eventos.objects.all(),
+        'events': Eventos.objects.all(),
     }
     return render(request, "nuarte/eventos.html", context)
 
 def grupos(request):
     context = {
-        'grupos': Grupos.objects.all(),
+        'groups': Grupos.objects.all(),
     }
     return render(request, "nuarte/grupos.html", context)
 
 def historia(request):
     context = {
-        'historia': Historia.objects.all(),
-        'coordenadores': Coordenadores.objects.all(),
+        'history': Historia.objects.all(),
+        'coordinators': Coordenadores.objects.all(),
     }
     return render(request, "nuarte/historia.html", context)

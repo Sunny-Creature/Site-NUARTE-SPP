@@ -24,7 +24,7 @@ class Historia(models.Model):
 
 # -- model para form de contato
 class Contato(models.Model):
-    nome_contato = models.CharField(max_length="100")
-    mensagem_contato = models.CharField(max_length="500")
+    nome_contato = models.CharField(max_length=100)
+    mensagem_contato = models.CharField(max_length=500)
     data_envio_contato = models.DateField(auto_now_add=True)
     horas_envio_contato = models.TimeField(auto_now_add=True)
