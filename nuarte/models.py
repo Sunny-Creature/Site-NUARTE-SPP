@@ -10,8 +10,8 @@ class Coordenadores(models.Model):
 class Grupos(models.Model):
     nome_grupo = models.CharField(max_length=20)
     icone_grupo = models.ImageField(upload_to="icones_grupos/")
-    nome_bolsista = models.CharField(max_length=100)
-    icone_bolsista = models.ImageField(upload_to="icones_bolsistas/")
+    nome_bolsista = models.CharField(max_length=100, null=True)
+    icone_bolsista = models.ImageField(upload_to="icones_bolsistas/", null=True)
 
 class Eventos(models.Model):
     titulo_evento = models.CharField(max_length=60)
