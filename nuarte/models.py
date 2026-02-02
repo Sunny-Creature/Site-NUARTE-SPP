@@ -8,7 +8,7 @@ class Coordenadores(models.Model):
     icone_coordenador = models.ImageField(upload_to="icones_coordenadores/")
 
 class Grupos(models.Model):
-    nome_grupo = models.CharField(max_length=20)
+    nome_grupo = models.CharField(max_length=30)
     icone_grupo = models.ImageField(upload_to="icones_grupos/")
     nome_bolsista = models.CharField(max_length=100, null=True)
     icone_bolsista = models.ImageField(upload_to="icones_bolsistas/", null=True)
@@ -25,6 +25,6 @@ class Historia(models.Model):
 # -- model para form de contato
 class Contato(models.Model):
     nome_contato = models.CharField(max_length=100)
-    mensagem_contato = models.CharField(max_length=500)
+    mensagem_contato = models.CharField(max_length=250)
     data_envio_contato = models.DateField(auto_now_add=True)
     horas_envio_contato = models.TimeField(auto_now_add=True)
