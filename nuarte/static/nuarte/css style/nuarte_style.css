@@ -1,3 +1,5 @@
+/* BASE */
+
 body {
     background-color: rgb(255, 249, 171);
     font-family: 'Arial';
@@ -5,9 +7,73 @@ body {
 
 .global-navbar {
     padding-top: 10px;
+    padding-bottom: 10px;
     background-color: white;
 }
 
 .navbar-footer {
+    background-color: white;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+/* PÁGINA PRINCIPAL */
+
+.nuarte-groups1 h1 {
+    text-align: center;
+}
+
+.nuarte-coordinators1 h1 {
+    text-align: center;
+}
+
+.nuarte-contact-form h1 {
+    text-align: center;
+}
+
+.nuarte-contact-form {
+    background-image: none;
+}
+
+.contact-form {
+    position: relative;
+    display: grid;
+    background-color: #68B1BF;
+    border-radius: 20px;
+    margin: auto;
+    padding: 50px;
+    height: 420px;
+    width: 820px;
+}
+
+.send-message-input {
+    background-color: #FB9645;
+    color: #FBD35B;
+    font-weight: bold;
+    font-size: larger;
+    border-style: none;
+    border-radius: 20px;
+    height: 60px;
+    width: 120px;
+}
+
+/* EVENTOS */
+
+/* GRUPOS */
+
+/* HISTÓRIA */
+.history-content {
+    display: grid;
+    position: relative;
+    grid: 50px;
+    padding: 50px;
+    font-size: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 220px;
+    margin-left: 360px;
+    margin-right: 360px;
+    border-radius: 20px;
     background-color: white;
 }

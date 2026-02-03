@@ -13,34 +13,39 @@
 
 <body>
     {% block content %}
-        <p>insert text</p>
-
         <div class="nuarte-groups1">
-            <h2>CONHEÇA NOSSOS GRUPOS</h2>
+            <h1>CONHEÇA NOSSOS GRUPOS</h1>
 
-            {% for groups in grupos %}
-                <p>{{ grupos.icone_grupo }}</p>
-                <p>{{ grupos.nome_grupo }}</p>
+            {% for grupos in groups %}
+                <ul>
+                    <li>{{ grupos.icone_grupo }}</li>
+                    <li>{{ grupos.nome_grupo }}</li>
+                </ul></p>
+                <p></p>
             {% endfor %}
         </div>
 
         <div class="nuarte-coordinators1">
-            <h2>COORDENADORES DO NUARTE</h2>
+            <h1>COORDENADORES DO NUARTE</h1>
 
-            {% for coordinators in coordenadores %}
-                <p>{{ coordenadores.icone_coordenadores }}</p>
-                <p>{{ coordenadores.nome_coordenadores }}</p>
+            {% for coordenadores in coordinators %}
+                <ul>
+                    <li>{{ coordenadores.nome_coordenador }}</li>
+                    <li>{{ coordenadores.icone_coordenador }}</li>
+                </ul>
             {% endfor %}
         </div>
 
-        <!-- forms para contato-->
+        <div class="nuarte-contact-form">
+            <h1>PARA DÚVIDAS, ENTRE EM CONTATO</h1>
+            <form method="POST" enctype="multipart/form-data" class="contact-form">
+                {% csrf_token %}
+                {{ form_contato | crispy }}
+                <input type="submit" value="Enviar" class="send-message-input">
+            </form>
+        </div>
 
-        <h1>PARA DÚVIDAS, ENTRE EM CONTATO:</h1>
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form_contato | crispy }}
-            <input type="submit" value="Enviar">
-        </form>
+        <!-- forms para contato-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     {% endblock %}
