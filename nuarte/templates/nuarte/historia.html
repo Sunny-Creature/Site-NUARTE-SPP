@@ -3,29 +3,26 @@
 {% load crispy_forms_filters %}
 {% block title %}- História{% endblock %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'nuarte/css style/nuarte_style.css' %}"/>
-</head>
-
-<body>
     {% block content %}
         <h1>HISTÓRIA</h1>
         <div class="history-content">
             <p>
-                O Núcleo de Arte do Potengi - NUARTE/SPP, vem atuando junto à comunidade interna e externa,
-                através das atividades artísticas e culturais que são desenvolvidas no IFRN, Campus São Paulo
-                do Potengi, desde o ano de 2015. Com a implementação do programa de apoio aos Núcleos de Arte,
-                em 2016, por intermédio da Pró-Reitoria de Extensão (PROEX), foram criadas as condições para a
-                formação dos grupos artísticos, nos campi do IFRN, o que oportunizou a consolidação das práticas
-                que já vinham sendo desenvolvidas no Campus SPP, nas linguagens do teatro e da música.
+                {{ historia.desc_historia }}
             </p>
         </div>
+
+        <div class="coordenadores">
+            <h1>COORDENADORES ATUAIS</h1>
+            {% for coordinator in coordenadores %}
+                <ul>
+                    <li>
+                        <div class="nuarte-coordinators-icons1">
+                            {{ coordinator.nome_coordenador }}
+                        </div>
+                    </li>
+                    <li>{{ coordinator.icone_coordenador }}</li>
+                    <li>{{ coordinator.bio_coordenador }}</li>
+                </ul>
+            {% endfor %}
+        </div>
     {% endblock %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>

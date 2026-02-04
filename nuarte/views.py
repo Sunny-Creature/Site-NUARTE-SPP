@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from nuarte.models import Eventos, Grupos, Historia, Coordenadores
 from nuarte.forms import FormContato
 
@@ -6,8 +7,8 @@ from nuarte.forms import FormContato
 
 def index(request):
     context = {
-        'groups': Grupos.objects.all(),
-        'coordinators': Coordenadores.objects.all(),
+        'grupos': Grupos.objects.all(),
+        'coordenadores': Coordenadores.objects.all(),
         'form_contato': FormContato(),
     }
 
@@ -16,26 +17,25 @@ def index(request):
 
         if form_contato.is_valid():
             form_contato.save()
-            print("A mensagem foi salva com sucesso!")
+            messages.success(request, "A mensagem foi enviada com sucesso!")
 
-        context['form_contato'] = form_contato
     return render(request, "nuarte/index.html", context)
 
 def eventos(request):
     context = {
-        'events': Eventos.objects.all(),
+        'eventos': Eventos.objects.all(),
     }
     return render(request, "nuarte/eventos.html", context)
 
 def grupos(request):
     context = {
-        'groups': Grupos.objects.all(),
+        'grupos': Grupos.objects.all(),
     }
     return render(request, "nuarte/grupos.html", context)
 
 def historia(request):
     context = {
-        'history': Historia.objects.all(),
-        'coordinators': Coordenadores.objects.all(),
+        'historia': Historia.objects.first(),
+        'coordenadores': Coordenadores.objects.all(),
     }
     return render(request, "nuarte/historia.html", context)
