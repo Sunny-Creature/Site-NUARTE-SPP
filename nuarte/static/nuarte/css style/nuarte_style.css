@@ -1,35 +1,92 @@
-/* BASE */
+/* BARRA DE ROLAGEM */
+::-webkit-scrollbar {
+    width: auto;
+}
+::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #68B1BF;
+    border-radius: 20px;
+}
 
+/* BASE */
 body {
     background-color: rgb(255, 249, 171);
     font-family: 'Arial';
 }
 
 .global-navbar {
-    padding-top: 10px;
+    top: 0;
+    padding-top: 20px;
     padding-bottom: 10px;
     background-color: white;
+    width: 100%;
+}
+
+.nav-item {
+    align-content: center;
 }
 
 .navbar-footer {
     background-color: white;
     bottom: 0;
-    position: absolute;
+    position: static;
     width: 100%;
 }
 
+#nuarte-logo {
+    height: 60px;
+    width: 110px;
+}
+
 /* PÁGINA PRINCIPAL */
+#nuarte-parede {
+    margin: auto;
+    width: 100%;
+    opacity: 0.2;
+}
+
+.nuarte-about {
+    color: #68B1BF;
+    position: absolute;
+    font-weight: bolder;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.nuarte-about h1 {
+    font-size: 210px;
+}
+
+.nuarte-about p {
+    font-size: 40px;
+    background: none;
+    border: 6px solid;
+    margin: auto;
+    border-color: #68B1BF;
+    border-radius: 50px;
+    width: 20%;
+}
 
 .nuarte-groups1 h1 {
     text-align: center;
+    font-size: 80px;
 }
 
 .nuarte-coordinators1 h1 {
     text-align: center;
+    font-size: 80px;
 }
 
 .nuarte-contact-form h1 {
     text-align: center;
+    font-size: 80px;
 }
 
 .nuarte-contact-form {

@@ -13,12 +13,23 @@
 
 <body>
     {% block content %}
+    <img src="{% static 'nuarte/media/parede-nuarte.png' %}" id="nuarte-parede">
+    
+        <div class="nuarte-about">
+            <h1>NUARTE</h1>
+            <p>Saiba mais</p>
+        </div>
+
         <div class="nuarte-groups1">
             <h1>CONHEÇA NOSSOS GRUPOS</h1>
 
-            {% for grupos in groups %}
+            {% for groups in grupos %}
                 <ul>
-                    <li>{{ grupos.icone_grupo }}</li>
+                    <li>
+                        <div class="nuarte-groups-icons1">
+                            {{ grupos.icone_grupo }}
+                        </div>
+                    </li>
                     <li>{{ grupos.nome_grupo }}</li>
                 </ul></p>
                 <p></p>
@@ -28,9 +39,13 @@
         <div class="nuarte-coordinators1">
             <h1>COORDENADORES DO NUARTE</h1>
 
-            {% for coordenadores in coordinators %}
+            {% for coordinators in coordenadores %}
                 <ul>
-                    <li>{{ coordenadores.nome_coordenador }}</li>
+                    <li>
+                        <div class="nuarte-coordinators-icons1">
+                            {{ coordenadores.nome_coordenador }}
+                        </div>
+                    </li>
                     <li>{{ coordenadores.icone_coordenador }}</li>
                 </ul>
             {% endfor %}
