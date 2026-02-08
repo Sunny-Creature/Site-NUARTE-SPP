@@ -3,7 +3,7 @@
 {% load crispy_forms_filters %}
 
     {% block content %}
-    <img src="{% static 'nuarte/img/gatos.jpg' %}" id="nuarte-parede">
+    <img src="{% static 'nuarte/img/parede-nuarte.png' %}" id="nuarte-parede">
     
         <div class="nuarte-about">
             <h1>NUARTE</h1>
@@ -43,6 +43,7 @@
 
         <!-- forms para contato-->
         <div class="nuarte-contact-form">
+            <img src="{% static 'nuarte/img/campus-spp.png' %}" id="">
             <h1>PARA DÚVIDAS, ENTRE EM CONTATO</h1>
             <form method="POST" enctype="multipart/form-data" class="contact-form">
                 {% csrf_token %}

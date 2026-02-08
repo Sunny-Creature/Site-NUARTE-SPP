@@ -4,9 +4,21 @@
 {% block title %}- Grupos{% endblock %}
 
     {% block content %}
+        <h1>GRUPOS</h1>
         <div class="nuarte-groups2">
             {% for group in grupos %}
                 <h1>{{ group.nome_grupo }}</h1>
+                <p>{{ group.desc_grupo }}</p>
+
+                <h2>BOLSISTAS</h2>
+                <ul>
+                    <li>
+                        <div class="nuarte-scholarshipholder">
+                            {{ coordinator.nome_coordenador }}
+                        </div>
+                    </li>
+                    <li>{{ coordinator.icone_coordenador }}</li>
+                </ul>
             {% endfor %}
         </div>
     {% endblock %}
