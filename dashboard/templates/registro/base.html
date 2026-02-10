@@ -1,5 +1,5 @@
 {% load static %}
-{% load crispy_forms_filters %}
+{% block page_title %}Login{% endblock page_title %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,12 +38,12 @@
         <div class="navbar-footer">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'https://www.instagram.com/nuarte.spp/' %}">
+                    <a class="nav-link active" href="https://www.instagram.com/nuarte.spp/">
                         <img src="{% static 'nuarte/img/logo-nuarte.png' %}" id="nuarte-logo1">
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'https://portal.ifrn.edu.br/campus/sao-paulo-do-potengi/' %}">
+                    <a class="nav-link active" href="https://portal.ifrn.edu.br/campus/sao-paulo-do-potengi/">
                         <img src="{% static 'nuarte/img/logo-ifrn-spp.png' %}" id="ifrn-spp-logo">
                     </a>
                 </li>

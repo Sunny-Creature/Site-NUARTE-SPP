@@ -30,13 +30,24 @@ body {
 }
 
 .navbar-footer {
-    background-color: white;
     bottom: 0;
-    position: static;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: white;
     width: 100%;
 }
 
 #nuarte-logo {
+    height: 60px;
+    width: 110px;
+}
+
+#nuarte-logo1 {
+    height: 60px;
+    width: 110px;
+}
+
+#ifrn-spp-logo img {
     height: 60px;
     width: 110px;
 }
