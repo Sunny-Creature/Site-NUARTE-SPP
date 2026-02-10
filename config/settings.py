@@ -134,6 +134,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 AUTH_USER_MODEL = "usuarios.Usuario"
 
-LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = "dashboard:index"
+LOGIN_URL = 'registro:login'
+LOGIN_REDIRECT_URL = "dashboard:dashboard"
 LOGOUT_REDIRECT_URL = "nuarte:index"

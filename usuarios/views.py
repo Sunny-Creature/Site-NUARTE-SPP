@@ -23,7 +23,7 @@ def cadastro(request):
 def usuarios(request):
     context = {
         "usuarios": Usuario.objects.all(),
-        "titulo_pagina": "NUARTE SPP - USUÁRIOS",
+        "titulo_pagina": "Usuários",
         "url_novo": "usuarios:usuarios_novo",
         "partial_tabela": "dashboard/partials/_tabela_usuarios.html",
     }
