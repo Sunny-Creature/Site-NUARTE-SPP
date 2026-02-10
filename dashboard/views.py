@@ -5,5 +5,18 @@ from usuarios.models import Usuario
 
 # Create your views here.
 
-#@login_required
-#@permission_required
+@login_required
+def dashboard(request):
+    context  ={
+        "coordenador": Coordenadores.objects.first(),
+    }
+    if not request.user.has_perm("coordenadores.add_coord"):
+        return redirect("index")
+    return render(request, "dashboard.html", context)
+
+@login_required
+def grupos(request):
+    context = {
+        ""
+    }
+    return render(request, "dashboard")
