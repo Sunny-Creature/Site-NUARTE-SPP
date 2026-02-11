@@ -9,15 +9,16 @@
             {% for group in grupos %}
                 <h1>{{ group.nome_grupo }}</h1>
                 <p>{{ group.desc_grupo }}</p>
+                <img src="{{ group.icone_grupo.url }}">
 
                 <h2>BOLSISTAS</h2>
                 <ul>
                     <li>
                         <div class="nuarte-scholarshipholder">
-                            {{ coordinator.nome_coordenador }}
+                            {{ group.nome_bolsista }}
                         </div>
                     </li>
-                    <li>{{ coordinator.icone_coordenador }}</li>
+                    <img src="{{ group.icone_bolsista.url }}">
                 </ul>
             {% endfor %}
         </div>
