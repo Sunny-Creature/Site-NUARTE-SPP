@@ -1,3 +1,3 @@
-# SITE NUARTE SPP
+# Site NUARTE-SPP
 
-- Site para o projeto de arte do campus São Paulo Potengi
+- Site para o núcleo de artes do Campus São Paulo Potengi.
