@@ -18,8 +18,8 @@ class Eventos(models.Model):
     titulo_evento = models.CharField(max_length=60)
     img_evento = models.ImageField(upload_to="img_eventos/")
     desc_evento = models.TextField()
-    data = models.DateField(null=True)
-    sobre = models.URLField(null=True) 
+    data_evento = models.DateField(null=True)
+    link_evento = models.URLField(null=True) 
 
 class Historia(models.Model):
     img_historia = models.ImageField(upload_to="img_historia/", blank=True)
@@ -30,4 +30,4 @@ class Contato(models.Model):
     nome_contato = models.CharField(max_length=100)
     mensagem_contato = models.TextField()
     data_envio_contato = models.DateField(auto_now_add=True)
-    horas_envio_contato = models.TimeField(auto_now_add=True)
+    hora_envio_contato = models.TimeField(auto_now_add=True)

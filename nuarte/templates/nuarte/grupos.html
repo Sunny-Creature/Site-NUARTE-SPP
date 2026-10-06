@@ -5,20 +5,20 @@
 
     {% block content %}
         <h1>GRUPOS</h1>
-        <div class="nuarte-groups2">
-            {% for group in grupos %}
-                <h1>{{ group.nome_grupo }}</h1>
-                <p>{{ group.desc_grupo }}</p>
-                <img src="{{ group.icone_grupo.url }}">
+        <div class="nuarte-grupos2">
+            {% for grupo in grupos %}
+                <h1>{{ grupo.nome_grupo }}</h1>
+                <p>{{ grupo.desc_grupo }}</p>
+                <img src="{{ grupo.icone_grupo.url }}">
 
                 <h2>BOLSISTAS</h2>
                 <ul>
                     <li>
-                        <div class="nuarte-scholarshipholder">
-                            {{ group.nome_bolsista }}
+                        <div class="nuarte-bolsistas">
+                            {{ grupo.nome_bolsista }}
                         </div>
                     </li>
-                    <img src="{{ group.icone_bolsista.url }}">
+                    <img src="{{ grupo.icone_bolsista.url }}">
                 </ul>
             {% endfor %}
         </div>

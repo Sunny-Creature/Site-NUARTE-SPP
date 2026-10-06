@@ -5,7 +5,7 @@
     {% block content %}
     <img src="{% static 'nuarte/img/parede-nuarte.png' %}" id="nuarte-parede">
     
-        <div class="nuarte-about">
+        <div class="nuarte-sobre">
             <h1>NUARTE</h1>
             <a href="{% url 'historia' %}"><p>Saiba mais</p></a>
         </div>
@@ -13,27 +13,27 @@
         <div class="nuarte-groups1">
             <h1>CONHEÇA NOSSOS GRUPOS</h1>
 
-            {% for group in grupos %}
+            {% for grupo in grupos %}
                 <ul>
                     <li>
                         <div class="nuarte-groups-icons1">
-                            {{ group.icone_grupo }}
+                            {{ grupo.icone_grupo }}
                         </div>
                     </li>
-                    <li>{{ group.nome_grupo }}</li>
+                    <li>{{ grupo.nome_grupo }}</li>
                 </ul></p>
                 <p></p>
             {% endfor %}
         </div>
 
-        <div class="nuarte-coordinators1">
+        <div class="nuarte-coordenadores1">
             <h1>COORDENADORES DO NUARTE</h1>
 
-            {% for coordinator in coordenadores %}
+            {% for coordenador in coordenadores %}
                 <ul>
                     <li>
-                        <div class="nuarte-coordinators-icons1">
-                            {{ coordinator.nome_coordenador }}
+                        <div class="nuarte-coordenadores-icones1">
+                            {{ coordenador.nome_coordenador }}
                         </div>
                     </li>
                     <li>{{ coordinator.icone_coordenador }}</li>
@@ -42,13 +42,13 @@
         </div>
 
         <!-- forms para contato-->
-        <div class="nuarte-contact-form">
-            <img src="{% static 'nuarte/img/campus-spp.png' %}" id="">
+        <div class="nuarte-form-contato">
+            <img src="{% static 'nuarte/img/campus-spp.png' %}" id="campus-spp">
             <h1>PARA DÚVIDAS, ENTRE EM CONTATO</h1>
-            <form method="POST" enctype="multipart/form-data" class="contact-form">
+            <form method="POST" enctype="multipart/form-data" id="form-contato">
                 {% csrf_token %}
                 {{ form_contato | crispy }}
-                <input type="submit" value="Enviar" class="send-message-input">
+                <input type="submit" value="Enviar" id="enviar-mensagem">
             </form>
         </div>
 
