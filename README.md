@@ -9,9 +9,11 @@
   </a>
 </p>
 
-<h2>Discentes</h2>
+## Equipe
+<p><b>Discentes</b></p>
 🎶 <a href="https://github.com/SabrinaSilva-16">Sabrina Silva</a>
+</br>
 🖌️ <a href="https://github.com/Sunny-Creature">Sônia Isis</a>
-
-<h2>Orientador</h2>
+</br>
+<p><b>Orientador</b></p>
 🐧 <a href="">Prof. Diego Cirilo</a>
